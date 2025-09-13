@@ -51,6 +51,7 @@ public class PedidoService {
         }
     }
 
+    //Eliminar un pedido
     public void deletePedido(int id_pedido) {
         pedidos.removeIf(pedido -> pedido.getId_pedido() == id_pedido);
     }

@@ -16,6 +16,8 @@ public class Plato {
         this.disponible = disponible;
         this.categoria = categoria;
     }
+    public Plato() {
+    }
 
     public int getId_plato() {
         return id_plato;

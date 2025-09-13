@@ -37,9 +37,6 @@ public class PedidoController {
         pedidoService.addPedido(pedido);
     }
 
-
-    
-
     // Endpoint para actualizar el estado de un pedido
     @PutMapping("/pedidos/{id}")
     public void updatePedido(@PathVariable int id, @RequestBody Pedido pedidoActualizado) {
