@@ -11,6 +11,9 @@ public class Pedido {
     private String estado;
     private LocalDateTime fechaHora;
     private String direccionEntrega;
+
+    public Pedido() {
+    }
     
 
     public Pedido(int id_pedido, String clienteNombre, List<Plato> platos, double total, String estado, LocalDateTime fechaHora, String direccionEntrega) {
@@ -23,11 +26,11 @@ public class Pedido {
         this.direccionEntrega = direccionEntrega;
     }
 
-    public int getId_plato() {
+    public int getId_pedido() {
         return id_pedido;
     }
 
-    public void setId_plato(int id_pedido) {
+    public void setId_pedido(int id_pedido) {
         this.id_pedido = id_pedido;
     }
 
