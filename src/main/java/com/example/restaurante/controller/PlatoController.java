@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.restaurante.model.Plato;
-import com.example.restaurante.service.PedidoService;
 import com.example.restaurante.service.PlatoService;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -22,7 +20,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class PlatoController {
     private final PlatoService platoService;
 
-    public PlatoController(PlatoService platoService, PedidoService pedidoService) {
+    public PlatoController(PlatoService platoService) {
         this.platoService = platoService;
     }
 
@@ -40,7 +38,7 @@ public class PlatoController {
 
     // EndPoint para obtener un pedido por ID
     @GetMapping("/platos/{id}")
-    public Plato getPlatoById(@RequestParam int id) {
+    public Plato getPlatoById(@PathVariable int id) {
         return platoService.getPlato(id);
     }
 

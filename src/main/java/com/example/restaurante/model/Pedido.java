@@ -13,6 +13,7 @@ public class Pedido {
     private String direccionEntrega;
 
     public Pedido() {
+        
     }
     
 
