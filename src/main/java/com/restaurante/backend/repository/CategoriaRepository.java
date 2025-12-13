@@ -1,5 +1,6 @@
 package com.restaurante.backend.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,4 +12,7 @@ import com.restaurante.backend.models.Categoria;
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
     Optional<Categoria> findByNombre(String nombre);
     boolean existsByNombre(String nombre);
+    
+    // Ordenar por ID ascendente
+    List<Categoria> findAllByOrderByIdAsc();
 }

@@ -28,7 +28,7 @@ public class CategoriaServiceImpl implements CategoriaService {
     @Override
     @Transactional(readOnly = true)
     public List<CategoriaDTO> findAll() {
-        return categoriaRepository.findAll().stream()
+        return categoriaRepository.findAllByOrderByIdAsc().stream()
                 .map(categoriaMapper::toDTO)
                 .collect(Collectors.toList());
     }
